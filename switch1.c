@@ -33,7 +33,7 @@
 
         }
     }while(n==3);
-       // printf ("%d",number);
+       printf ("%d",number);
 
     return 0;
  }
