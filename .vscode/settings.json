@@ -60,6 +60,8 @@
   "files.associations": {
     "SWAPPING.C": "cpp",
     "GST.C": "cpp",
-    "ABCDE.C": "cpp"
+    "ABCDE.C": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
