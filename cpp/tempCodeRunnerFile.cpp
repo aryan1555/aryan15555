@@ -1,1 +1,1 @@
- // float ctotal(int eng, int maths, int sci);
+ while
