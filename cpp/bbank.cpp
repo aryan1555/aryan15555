@@ -9,7 +9,10 @@ private:
   int code;
   int cash;
   int balance = 50000;
+  
 
+
+  
 public:
   void account()
   {
