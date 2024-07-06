@@ -2,80 +2,124 @@
 using namespace std;
 class bank
 {
-        float balance = 50000;
-        
+private:
+  int ATM_pin;
+  int mobile_number;
+  int pin;
+  int code;
+  int cash;
+  int balance = 50000;
 
-               
-        void deposite(int n)
-        {
-                balance = balance + n;
-        }
+public:
+  void account()
+  {
+    cout << "ENTER PIN NUMBER : ";
+    cin >> ATM_pin;
+    cout << endl;
+    if (ATM_pin == 0000)
+    {
+      cout << "******Aryan******" << endl
+           << endl;
+    }
+    else
+    {
+      cout << "exit" << endl;
+    }
+  }
+  void pin_n()
+  {
+    cout << "------WELLCOME TO SBI ------";
 
-        
-        void withdraw(int n)
-        {
-                if (n <= balance)
-                {
-                        balance = balance - n;
-                }
-                else
-                {
-                        cout << "invelide Balance" << endl;
-                }
-               
-        }
-        
-        void show()
-        {
-                cout << "Your balance is : " << balance << endl;
-        }
+    cout << "ENTER THE MOBILE NUMBER : ";
+    cin >> mobile_number;
+  }
+
+   void withdrawal()
+  {
+    cout << "------WELLCOME TO SBI ------" << endl
+         << endl;
+    cout << "----ENTER YOUR ATM CARD----" << endl;
+
+    cout << "ENTER THE AMOUNT : ";
+    cin >> cash;
+    cout << "ENTER PIN NUMBER : ";
+    cin >> ATM_pin;
+    if (balance = (balance - cash))
+    {
+      cout << "BALANCE IS : " << balance;
+    }
+    else
+    {
+      cout << balance;
+    }
+  }
+  void deposit()
+  {
+    cout << "------WELLCOME TO SBI ------" << endl
+         << endl;
+    cout << "----ENTER YOUR ATM CARD----" << endl
+         << endl;
+
+    cout << "ENTER PIN NUMBER : ";
+    cin >> ATM_pin;
+    cout << "ENTER THE AMOUNT : ";
+    cin >> cash;
+
+    if (balance = (balance + cash))
+    {
+      cout << "BALANCE IS : " << balance;
+    }
+    else
+    {
+      cout << balance;
+    }
+  }
+
+  void exit()
+  {
+
+    cout << "------THANKS FOR VISIT------";
+  }
 };
-
 int main()
 {
-        bank b;
-        int n, amount;
-        int choice;
-        while (n != 0)
-        {
-                cout << "-----welcom-----  " << endl;
-                cout << "1 : Deposite  " << endl;
-                cout << "2 : Withdraw  " << endl;
-                cout << "3 : Show Balance   " << endl;
-                cout << "4 : Exit  " << endl;
-                cout << "Enter Your choice :   ";
-                cin >> n;
+  bank b;
+  cout << "\t--------------SBI BANK----------------" << endl
+       << endl;
 
-                switch (n)
-                {
+  int number;
+  do
+  {
+    cout << endl
+         << "1 : ACOUNT " << endl
+         << endl;
+    cout << "2 : CASH WITHDRAWAL " << endl
+         << endl;
+    cout << "3 : CASH DEPOSIT" << endl
+         << endl;
+    cout << "4 : EXIT" << endl
+         << endl;
+    cout << "select number : ";
+    cin >> number;
 
-                case 1:
-                        cout << "Enter deposit : ";
-                        cin >> amount;
-                        b.deposite(amount);
+    switch (number)
+    {
+    case 1:
+      b.account();
+      break;
 
-                        break;
-                case 2:
-                        cout << "Enter Withdraw : ";
-                        cin >> amount;
-                        b.withdraw(amount);
-                        b.show();
-                        
-                        break;
-                case 3:
-                        b.show();
-                        break;
-                case 4:
-                        cout << " Thank you for visit " << endl;
-                        return 0;
-                        break;
+    case 2:
+      b.withdrawal();
+      break;
 
-                default:
-                        cout << "Invalid balance " << endl;
-                }
-        }do(n==4);
-        
-        
-        return 0;
+    case 3:
+      b.deposit();
+      break;
+
+    case 4:
+      b.exit();
+      break;
+    }
+  } while (number != 5);
+  return 0;
 }
- 
